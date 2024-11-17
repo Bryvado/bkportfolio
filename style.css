@@ -46,7 +46,7 @@ body {
 .hero {
     text-align: center;
     background: #4940BB;
-    color: #ffffff;
+    color: #000000;
     padding: 20px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 20px var(--card-shadow-color);
