@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom.">
+    <meta name="keywords" content="Kennedy Center, Foggy Bottom, urban planning, Washington DC, Bryson Kloesel">
+    <title>Panel Looks to Bridge Physical Divide Between Kennedy Center and Foggy Bottom</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <script src="theme-toggle.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="hero article-hero" role="banner">
+        <div class="header-content">
+            <h1>Panel Looks to Bridge Physical Divide Between Kennedy Center and Foggy Bottom</h1>
+            <p>Published on March 4, 2024</p>
+            
+            <!-- Improved Theme Toggle Button -->
+            <button aria-label="Toggle light/dark mode" id="theme-toggle" class="theme-toggle">
+                <span id="theme-icon">🌞</span> 
+                <span id="theme-text">Light Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="content-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <nav>
+                    <h3>Related Articles</h3>
+                    <ul>
+                        <li><a href="https://example.com/report1">Urban Planning Report on Kennedy Center</a></li>
+                        <li><a href="https://example.com/report2">Foggy Bottom Connectivity Study</a></li>
+                        <li><a href="https://example.com/report3">Future of Public Spaces in D.C.</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Article Content -->
+            <section class="article-content">
+                <h2>By Bryson Kloesel, Reporter</h2>
+                <p>A panel of urban planning experts released a report last month with recommendations to improve the physical divide created by a stretch of highway near the Kennedy Center.</p>
+                <p>D.C. officials commissioned the think tank Urban Land Institute to lead the report, which consisted of a two-day panel in September with more than 30 stakeholders to form recommendations.</p>
+                
+                <blockquote>“The very next step is forming this development authority,” said Marc Gazda, the report’s author and a project manager at ULI Washington.</blockquote>
+
+                <p>The report, supported by the National Capital Planning Commission, found a strong desire for pedestrian and cyclist connectivity in the region, currently unmet by existing infrastructure.</p>
+
+                <blockquote>“It would be nice to reconnect it,” said Thomas Luebke, U.S. Commission on Fine Arts secretary. “There’s a whole cluster of issues that all point to a really great opportunity in this part of the city to improve things we probably wouldn’t do today if we were thinking about it that way.”</blockquote>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="article-footer" role="contentinfo">
+        <p>&copy; 2024 Bryson Kloesel. All rights reserved.</p>
+        <p>Originally published in <a href="https://gwhatchet.com/2024/03/04/panel-looks-to-bridge-physical-divide-between-kennedy-center-and-foggy-bottom/" target="_blank" rel="noopener noreferrer">The GW Hatchet</a>.</p>
+    </footer>
+
+    <!-- JavaScript for Theme Toggle -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const savedTheme = localStorage.getItem("theme") || "light";
+            document.documentElement.setAttribute("data-theme", savedTheme);
+            updateThemeToggleText(savedTheme);
+
+            const themeToggle = document.getElementById("theme-toggle");
+            themeToggle.addEventListener("click", function() {
+                const currentTheme = document.documentElement.getAttribute("data-theme");
+                const newTheme = currentTheme === "dark" ? "light" : "dark";
+                document.documentElement.setAttribute("data-theme", newTheme);
+                localStorage.setItem("theme", newTheme);
+                updateThemeToggleText(newTheme);
+            });
+
+            function updateThemeToggleText(theme) {
+                const themeIcon = document.getElementById("theme-icon");
+                const themeText = document.getElementById("theme-text");
+                if (theme === "dark") {
+                    themeIcon.textContent = "🌜";
+                    themeText.textContent = "Dark Mode";
+                } else {
+                    themeIcon.textContent = "🌞";
+                    themeText.textContent = "Light Mode";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

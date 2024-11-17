@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Light Theme Variables */
+:root {
+    --primary-color: #6e8efb;
+    --secondary-color: #a777e3;
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --light-text-color: #666;
+    --hero-bg-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --card-bg-color: #ffffff;
+    --card-shadow-color: rgba(0, 0, 0, 0.08);
+    --font-family: 'Roboto', sans-serif;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    --primary-color: #bb86fc;
+    --secondary-color: #03dac6;
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --light-text-color: #b0b0b0;
+    --card-bg-color: #1e1e1e;
+    --card-shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* General Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styling */
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    font-size: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: #4940BB;
+    color: #ffffff;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px var(--card-shadow-color);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: url("thumbnails/B&O.jpg") center/cover no-repeat; /* Path to the uploaded image */
+    color: #ffffff;
+    padding: 70px 20px; /* Adjust padding to better accommodate image background */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px var(--card-shadow-color);
+}
+
+/* Adjust text styling in Hero section */
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff; /* Ensures text stands out against the background */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional shadow for better readability */
+}
+
+.hero p {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Optional shadow for paragraph text */
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.theme-toggle:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.theme-toggle span {
+    margin-right: 8px;
+}
+
+/* Navigation */
+.hero nav {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.hero nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Main Sections */
+main {
+    padding: 50px 20px;
+}
+
+.content-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+/* About Me Section */
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 100px;
+    text-align: center;
+    max-width: 800px; /* Centers section within larger screens */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-me img {
+    width: 150px;
+    height: 150px;
+    border-radius: 75%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0px; /* Adds space below the image */
+}
+
+/* About Me Content Styling */
+.about-me-content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.about-me-content h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.about-me-content p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-top: 0; /* Ensures no extra spacing at the top */
+    margin-bottom: 20px; /* Adds spacing at the bottom */
+}
+
+/* Optional Button Styling within About Me */
+.about-me-content .button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background 0.3s ease;
+    margin-top: 20px; /* Space between paragraph and button */
+}
+
+.about-me-content .button:hover {
+    background-color: var(--secondary-color);
+}
+
+
+.about-me-content p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Articles Section */
+.articles {
+    background: var(--card-bg-color);
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 6px 18px var(--card-shadow-color);
+    border-radius: 12px;
+}
+
+.articles h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.article {
+    max-width: 320px;
+    background: var(--card-bg-color);
+    box-shadow: 0 8px 24px var(--card-shadow-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.article img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.article h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 15px 20px 0;
+    color: var(--text-color);
+}
+
+.article p {
+    padding: 10px 20px 20px;
+    color: var(--light-text-color);
+    font-size: 1rem;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    max-width: 250px;
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--card-shadow-color);
+}
+.sidebar h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Article Content */
+.article-content {
+    flex: 3;
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--card-shadow-color);
+    max-width: 800px; /* Limits width of the content */
+    margin: 0 auto; /* Centers the content */
+}
+
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin: 1.5em 0 0.5em;
+}
+
+/* Blockquote */
+.article-content blockquote {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-left: 4px solid var(--primary-color);
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.contact {
+    background: var(--card-bg-color);
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 6px 18px var(--card-shadow-color);
+    border-radius: 12px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: var(--primary-color);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 15px var(--card-shadow-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    .article-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .articles h2,
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .hero nav a {
+        font-size: 1rem;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

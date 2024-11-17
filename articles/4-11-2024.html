@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kennedy Center design proposal to add park space, eliminate highway tunnels.">
+    <meta name="keywords" content="Kennedy Center, park space, highway tunnels, Washington DC, Bryson Kloesel">
+    <title>Kennedy Center Design Proposal: Adding Park Space & Eliminating Highway Tunnels</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme-toggle.js"></script>
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="hero article-hero" role="banner">
+        <div class="header-content">
+            <h1>Kennedy Center Design Proposal: Adding Park Space & Eliminating Highway Tunnels</h1>
+            <p>Published on April 11, 2024</p>
+            
+            <!-- Improved Theme Toggle Button -->
+            <button aria-label="Toggle light/dark mode" id="theme-toggle" class="theme-toggle">
+                <span id="theme-icon">🌞</span> 
+                <span id="theme-text">Light Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="content-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <nav>
+                    <h3>Related Articles</h3>
+                    <ul>
+                        <li><a href="https://ulidigitalmarketing.blob.core.windows.net/ulidcnc/sites/15/2024/02/2023_Foggy-Bottom-TAP-Report.pdf">Read the TAP Report here</a></li>
+                        <li><a href="https://www.washingtonpost.com/dc-md-va/2024/07/08/kennedy-center-national-mall-urban-planner-redesign">Washington Post’s Coverage</a></li>
+                        <li><a href="https://ncpc.gov/files/projects/2024/8536_Kennedy_Center-Foggy_Bottom_Area_Study_Project_Narrative_Apr2024.pdf">NCPC Project Narrative</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Article Content -->
+            <section class="article-content">
+                <h2>By Bryson Kloesel, Reporter</h2>
+                <p>The National Capital Planning Commission reiterated their commitment to reconfiguring major roadways between the Kennedy Center and Foggy Bottom at a meeting last week.</p>
+                <p>During the discussion on April 4, Senior Planner Matthew Flis presented urban planning and development initiatives around the Kennedy Center over the past year, including a report on the progress and future plans.</p>
+                <p>The proposal aims to add approximately 27 acres of usable park space to the area, including dedicated park areas between GW’s Foggy Bottom campus and the Kennedy Center.</p>
+                
+                <blockquote>“We’re excited about the work that’s completed,” Flis said.</blockquote>
+
+                <p>NCPC commissioners emphasized the importance of integrating the Kennedy Center’s future into ongoing planning efforts to ensure a cohesive space.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="article-footer" role="contentinfo">
+        <p>&copy; 2024 Bryson Kloesel. All rights reserved.</p>
+        <p>Originally published in <a href="https://gwhatchet.com/2024/04/11/kennedy-center-design-proposal-to-add-park-space-eliminate-highway-tunnels/" target="_blank" rel="noopener noreferrer">The GW Hatchet</a>.</p>
+    </footer>
+
+    <!-- JavaScript for Theme Toggle -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const savedTheme = localStorage.getItem("theme") || "light";
+            document.documentElement.setAttribute("data-theme", savedTheme);
+            updateThemeToggleText(savedTheme);
+
+            const themeToggle = document.getElementById("theme-toggle");
+            themeToggle.addEventListener("click", function() {
+                const currentTheme = document.documentElement.getAttribute("data-theme");
+                const newTheme = currentTheme === "dark" ? "light" : "dark";
+                document.documentElement.setAttribute("data-theme", newTheme);
+                localStorage.setItem("theme", newTheme);
+                updateThemeToggleText(newTheme);
+            });
+
+            function updateThemeToggleText(theme) {
+                const themeIcon = document.getElementById("theme-icon");
+                const themeText = document.getElementById("theme-text");
+                if (theme === "dark") {
+                    themeIcon.textContent = "🌜";
+                    themeText.textContent = "Dark Mode";
+                } else {
+                    themeIcon.textContent = "🌞";
+                    themeText.textContent = "Light Mode";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

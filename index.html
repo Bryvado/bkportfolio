@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Bryson Kloesel, showcasing articles and personal projects.">
+    <meta name="keywords" content="Bryson Kloesel, portfolio, articles, projects">
+    <title>Bryson Kloesel - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://bryvado.github.io/portfolio/favicon.ico" type="image/x-icon">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Portfolio of Bryson Kloesel",
+        "description": "A portfolio showcasing the work and projects of Bryson Kloesel, a student at George Washington University.",
+        "url": "https://bryvado.github.io/portfolio/",
+        "author": {
+            "@type": "Person",
+            "name": "Bryson Kloesel",
+            "affiliation": "George Washington University",
+            "url": "https://gw.edu/bryson-kloesel"
+        },
+        "datePublished": "2024-01-01",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://bryvado.github.io/portfolio/images/portrait.jpg",
+            "height": 800,
+            "width": 600
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "url": "https://bryvado.github.io/portfolio/articles/10-17-2024.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "url": "https://bryvado.github.io/portfolio/articles/11-11-2024.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "url": "https://bryvado.github.io/portfolio/articles/4-11-2024.html"
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+    <button aria-label="Toggle light/dark mode" id="theme-toggle">
+        <span id="theme-icon">🌞</span> <span id="theme-text">Light Mode</span>
+    </button>
+
+    <header class="hero" role="banner">
+        <nav aria-label="Main Navigation" class="main-nav">
+            <a href="#articles-heading">Articles</a>
+            <a href="#about-heading">About Me</a>
+            <a href="#contact-heading">Contact</a>
+        </nav>
+        <div class="hero-content">
+            <h1>Bryson Kloesel</h1>
+            <p>Writer, Researcher, Student</p>
+        </div>
+    </header>
+
+    <main>
+        <section aria-labelledby="articles-heading" class="articles">
+            <h2 id="articles-heading">All Articles</h2>
+            <div class="article-grid">
+                <article class="article">
+                    <a aria-label="Read article: Former historic preservation student at GW leads Rock Creek Park as superintendent" href="articles/11-11-2024.html">
+                        <img alt="Former historic preservation student at GW leads Rock Creek Park as superintendent" class="article-thumbnail" src="thumbnails/11-11-2024.jpg">
+                    </a>
+                    <div class="article-content">
+                        <h3>Former historic preservation student at GW leads Rock Creek Park as superintendent</h3>
+                        <p class="article-date">November 2024</p>
+                    </div>
+                </article>
+                <article class="article">
+                    <a aria-label="Read article: ANC presents revisions to bylaws, confirms two members’ resignations" href="articles/10-17-2024.html">
+                        <img alt="ANC presents revisions to bylaws, confirms two members’ resignations" class="article-thumbnail" src="thumbnails/10-17-2024.jpg">
+                    </a>
+                    <div class="article-content">
+                        <h3>ANC presents revisions to bylaws, confirms two members’ resignations</h3>
+                        <p class="article-date">October 2024</p>
+                    </div>
+                </article>
+                <article class="article">
+                    <a aria-label="Read article: Kennedy Center design proposal to add park space, eliminate highway tunnels" href="articles/4-11-2024.html">
+                        <img alt="Kennedy Center design proposal to add park space, eliminate highway tunnels" class="article-thumbnail" src="thumbnails/4-11-2024.jpg">
+                    </a>
+                    <div class="article-content">
+                        <h3>Kennedy Center design proposal to add park space, eliminate highway tunnels</h3>
+                        <p class="article-date">April 2024</p>
+                    </div>
+                </article>
+                <article class="article">
+                    <a aria-label="Read article: Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom" href="articles/3-4-2024.html">
+                        <img alt="Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom" class="article-thumbnail" src="thumbnails/3-4-2024.jpg">
+                    </a>
+                    <div class="article-content">
+                        <h3>Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom</h3>
+                        <p class="article-date">March 2024</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="about-heading" class="about">
+            <h2 class="about-me">About&nbsp; Me</h2>
+            <a href="portrait/Me!.jpg" class="about-me"><img src="portrait/Me!.jpg" alt="" width="200" height="200" class="about-me"></a>
+<p class="about-me" style="text-justify: auto">Born in Texas, living in Washington, D.C., writing wherever the wind blows.</p>
+        </section>
+
+        <section aria-labelledby="contact-heading" class="contact">
+          <h2 id="contact-heading">Contact Me</h2>
+<div class="social-links">
+        <a aria-label="LinkedIn Profile" href="https://www.linkedin.com/in/bryson-kloesel-49965327a/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+        <a aria-label="Email Bryson Kloesel" href="mailto:brysonkloesel@example.com">Email</a>
+      </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+      <p>© 2024 Bryson Kloesel. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const savedTheme = localStorage.getItem("theme");
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeIcon = document.getElementById("theme-icon");
+            const themeText = document.getElementById("theme-text");
+
+            if (savedTheme) {
+                document.documentElement.setAttribute("data-theme", savedTheme);
+                updateThemeToggleText(savedTheme);
+            }
+
+            themeToggle.addEventListener("click", function() {
+                const currentTheme = document.documentElement.getAttribute("data-theme");
+                const newTheme = currentTheme === "dark" ? "light" : "dark";
+                document.documentElement.setAttribute("data-theme", newTheme);
+                localStorage.setItem("theme", newTheme);
+                updateThemeToggleText(newTheme);
+            });
+
+            function updateThemeToggleText(theme) {
+                if (theme === "dark") {
+                    themeIcon.textContent = "🌜";
+                    themeText.textContent = "Dark Mode";
+                } else {
+                    themeIcon.textContent = "🌞";
+                    themeText.textContent = "Light Mode";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
